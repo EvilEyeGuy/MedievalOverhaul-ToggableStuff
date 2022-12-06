@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="VFECore.PatchOperationToggableSequence">
+    <enabled>True</enabled>
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <label>Medieval long range scanner:</label>
+    <operations>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<WorkGiverDef>
+					<defName>LongRangeScanMO</defName>
+					<label>writing letters</label>
+					<giverClass>WorkGiver_OperateScanner</giverClass>
+					<workType>Research</workType>
+					<priorityInType>50</priorityInType>
+					<verb>scan</verb>
+					<gerund>writing letters at</gerund>
+					<scannerDef>DankPyon_ScribeTableAdvanced</scannerDef>
+					<requiredCapacities>
+						<li>Manipulation</li>
+					</requiredCapacities>
+				</WorkGiverDef>
+			</value>
+		</li>
+
+		<!--li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_ScribeTable"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_LongRangeMineralScanner">
+					<scanSpeedStat>ResearchSpeed</scanSpeedStat>
+					<scanFindMtbDays>4</scanFindMtbDays>
+					<scanFindGuaranteedDays>8</scanFindGuaranteedDays>
+					<soundWorking>ScannerLongRangeMineral_Ambience</soundWorking>
+				</li>
+			</value>
+		</li-->
+
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/JobDef[defName="OperateScanner"]/reportString</xpath>
+			<value>
+				<reportString>writing letters</reportString>
+			</value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="DankPyon_BookBuildingBase">
+					<defName>DankPyon_Book_LongRangeScanner</defName>
+					<label>The Geologist: or Down and Up again</label>
+					<graphicData>
+						<texPath>Misc/Books/LongRangScanner_Book</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<drawSize>(2,2)</drawSize>
+					</graphicData>
+					<size>(1,1)</size>
+					<statBases>
+						<MarketValue>800</MarketValue>
+						<MaxHitPoints>100</MaxHitPoints>
+						<Beauty>20</Beauty>
+						<Mass>1</Mass>
+						<Flammability>1</Flammability>
+					</statBases>
+				</ThingDef>
+			</value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="SimpleResearchBench"]/comps/li[1]/linkableFacilities</xpath>
+			<value>
+				<li>DankPyon_Book_LongRangeScanner</li>
+			</value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_AdvancedResearchBench"]/comps/li[1]/linkableFacilities</xpath>
+			<value>
+				<li>DankPyon_Book_LongRangeScanner</li>
+			</value>
+		</li>
+
+
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+			  <ResearchProjectDef>
+				<defName>DankPyon_LongRangeScanner</defName>
+				<label>Advanced scibetable</label>
+				<description>Allows you to build an advanced scribe table that you can use to search for information about mineable materials.</description>
+				<baseCost>700</baseCost>
+				<tab>DankPyon_MedievalResearchTab</tab>
+				<techLevel>Medieval</techLevel>
+					<researchViewX>5.00</researchViewX>
+					<researchViewY>3.30</researchViewY>
+				<prerequisites>
+				  <li>DankPyon_CarrierBirds</li>
+				</prerequisites>  
+				<requiredResearchFacilities>
+				  <li>DankPyon_Book_LongRangeScanner</li>
+				</requiredResearchFacilities> 
+			  </ResearchProjectDef>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="CarpetMaking"]/researchViewX</xpath>
+			<value>
+				<researchViewX>2.00</researchViewX>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="CarpetMaking"]/researchViewY</xpath>
+			<value>
+				<researchViewY>2.00</researchViewY>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="DankPyon_TextileSpinning"]/researchViewX</xpath>
+			<value>
+				<researchViewX>4.00</researchViewX>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="DankPyon_TextileSpinning"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.90</researchViewY>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="DankPyon_Silk"]/researchViewX</xpath>
+			<value>
+				<researchViewX>5.00</researchViewX>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="DankPyon_Silk"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.90</researchViewY>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+			  <ThingDef ParentName="BuildingBase">
+				<defName>DankPyon_ScribeTableAdvanced</defName>
+				<label>advanced scribe table</label>
+				<description>A table housing wax tablets, which contain records and receipts. Alongside the tablets lay parchments, a seal, quills, and ink to allow for correspondence. When used alongside the bird post, the written letters can reach far lands quicker than a messenger. One can invite allies for feasts, rivals for a challenge, or neutral factions for trade. It can also be used to collect information on mineable resources.</description>
+				<thingClass>Building_CommsConsole</thingClass>
+				<graphicData>
+				  <texPath>Misc/TableScribe</texPath>
+				  <graphicClass>Graphic_Multi</graphicClass>
+				  <shaderType>CutoutComplex</shaderType>
+				  <drawSize>(5,4)</drawSize>
+				  <damageData>
+					<cornerTL>Damage/Corner</cornerTL>
+					<cornerTR>Damage/Corner</cornerTR>
+					<cornerBL>Damage/Corner</cornerBL>
+					<cornerBR>Damage/Corner</cornerBR>
+				  </damageData>
+				</graphicData>
+				<size>(3,2)</size>
+
+				<altitudeLayer>Building</altitudeLayer>
+				<passability>PassThroughOnly</passability>
+				<pathCost>50</pathCost>
+				<blockWind>false</blockWind>
+				<castEdgeShadows>true</castEdgeShadows>
+				<staticSunShadowHeight>0.20</staticSunShadowHeight>
+				<fillPercent>0.5</fillPercent>
+				<canOverlapZones>false</canOverlapZones>
+				<statBases>
+				  <MaxHitPoints>250</MaxHitPoints>
+				  <WorkToBuild>2800</WorkToBuild>
+				  <Flammability>0.6</Flammability>
+				  <Mass>15</Mass>
+				</statBases>
+
+				<stuffCategories>
+					<li>Metallic</li>
+					<li>Woody</li>
+					<li>Stony</li>
+				  </stuffCategories>
+				  <costStuffCount>150</costStuffCount>
+				<costList>
+				  <DankPyon_IronIngot>20</DankPyon_IronIngot>
+				  <DankPyon_ComponentBasic>5</DankPyon_ComponentBasic>
+				</costList>
+
+				<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+				<hasInteractionCell>true</hasInteractionCell>
+				<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+				<designationCategory>Misc</designationCategory>
+
+				<comps>
+				  <li Class="CompProperties_Power">
+					<compClass>CompPowerTrader</compClass>
+					<shortCircuitInRain>false</shortCircuitInRain>
+					<basePowerConsumption>2</basePowerConsumption>
+				  </li>
+				  <li Class="CompProperties_LongRangeMineralScanner">
+					<scanSpeedStat>ResearchSpeed</scanSpeedStat>
+					<scanFindMtbDays>4</scanFindMtbDays>
+					<scanFindGuaranteedDays>8</scanFindGuaranteedDays>
+					<soundWorking>ScannerLongRangeMineral_Ambience</soundWorking>
+				  </li>				  
+				</comps>
+
+				<designationHotKey>Misc3</designationHotKey>
+				<placeWorkers>
+				  <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+				</placeWorkers>
+				<researchPrerequisites>
+					<li>DankPyon_LongRangeScanner</li>
+				</researchPrerequisites>
+				<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+				<thingCategories>
+					<li>BuildingsMisc</li>
+				</thingCategories>
+				<minifiedDef>MinifiedThing</minifiedDef>
+			  </ThingDef>
+			</value>
+		</li>
+		
+		
+	</operations>
+  </Operation>
+</Patch>

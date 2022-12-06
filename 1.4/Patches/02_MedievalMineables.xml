@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="VFECore.PatchOperationToggableSequence">
+    <enabled>True</enabled>
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <label>Medieval mineables for long range scanner:</label>
+    <operations>
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables/li[6]</xpath>
+		</li>
+		
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables/li[5]</xpath>
+		</li>
+		
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables/li[4]</xpath>
+		</li>
+		
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables/li[3]</xpath>
+		</li>
+		
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables/li[2]</xpath>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables</xpath>
+			<value>
+				<li>DankPyon_MineableCoal</li>
+				<li>DankPyon_MineableSalt</li>
+				<!--li>DankPyon_MineableGold</li-->
+				<li>DankPyon_MineableIron</li>
+			</value>
+		</li>
+	</operations>
+  </Operation>
+</Patch>

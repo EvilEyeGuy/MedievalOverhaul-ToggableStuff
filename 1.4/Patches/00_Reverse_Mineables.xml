@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="VFECore.PatchOperationToggableSequence">
+    <enabled>False</enabled>
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <label>Restoring vanilla mineables generation during map creation:</label>
+    <operations>
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "MineablePlasteel"]/building/mineableScatterCommonality</xpath>
+			<value>
+				<mineableScatterCommonality>0.05</mineableScatterCommonality>
+			</value>
+		</li>
+
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "MineableComponentsIndustrial"]/building/mineableScatterCommonality</xpath>
+			<value>
+				<mineableScatterCommonality>1.00</mineableScatterCommonality>
+			</value>
+		</li>			
+
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "MineableSteel"]/building/mineableScatterCommonality</xpath>
+			<value>
+				<mineableScatterCommonality>1.00</mineableScatterCommonality>
+			</value>
+		</li>		
+	</operations>
+  </Operation>
+</Patch>

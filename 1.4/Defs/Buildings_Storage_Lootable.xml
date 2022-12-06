@@ -1,0 +1,1696 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+    <ThingDef Name="DankPyon_Lootable_Storage" ParentName="DankPyon_LootBuilding" Abstract="True">
+		<designationCategory MayRequire="DankPyon.Ruin.Dev">DankPyon_RuinFurniture</designationCategory>
+    </ThingDef>
+
+  	<!-- ==================== Wood Logs Base ==================== -->
+	
+  	<!-- ==================== Wood Logs ==================== -->
+	
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_WoodLogs1x1c</defName>
+		<label>raw wood pile</label>
+		<description>Logs that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/RawWood1x1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/RawWood1x1_north</uiIconPath>
+		<uiIconScale>1</uiIconScale>
+		<size>(1,1)</size>
+
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints> 
+			<Mass>4</Mass>
+			<WorkToBuild>250</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+		</statBases>
+		
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/RawWood1x1</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(2,2)</drawSize>
+                </emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawWood</li>
+				</randomItems>
+			</li>
+		</modExtensions>	
+	</ThingDef>
+	
+	<!--== Wood Logs 1x2 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_WoodLogs1x2c</defName>
+		<label>raw wood (1x2)</label>
+		<description>Logs that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/RawWood1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/RawWood1x2_north</uiIconPath>
+		<uiIconScale>1</uiIconScale>
+		<size>(2,1)</size>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints> 
+			<Mass>8</Mass>
+			<WorkToBuild>500</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		</statBases>
+		
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/RawWood1x2</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(4,3)</drawSize>
+                </emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawWood</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Wood Logs 2x2 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_WoodLogs2x2c</defName>
+		<label>raw wood (2x2)</label>
+		<description>Logs that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/RawWood2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/RawWood2x2_north</uiIconPath>
+		<uiIconScale>0.75</uiIconScale>
+		<size>(2,2)</size>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints> 
+			<Mass>16</Mass>
+			<WorkToBuild>1000</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		</statBases>
+				
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/RawWood2x2</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(4,4)</drawSize>
+                </emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>4~16</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawWood</li>
+				</randomItems>
+			</li>
+		</modExtensions>	
+	</ThingDef>
+
+  	<!-- ==================== Timber Base ==================== -->
+		
+	<!--== Timber 1x2 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_Timber1x2c</defName>
+		<label>timber (1x2)</label>
+		<description>Timber that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/Timber1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/Timber1x2_north</uiIconPath>
+		<uiIconScale>0.75</uiIconScale>
+		<size>(2,1)</size>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints> 
+			<Mass>8</Mass>
+			<WorkToBuild>500</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		</statBases>
+				
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/Timber1x2</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(4,3)</drawSize>
+                </emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Wood</li>
+				</randomItems>
+			</li>
+		</modExtensions>			
+	</ThingDef>
+	
+	<!--== Timber 2x2 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_Timber2x2c</defName>
+		<label>timber (2x2)</label>
+		<description>Timber that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/Timber2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/Timber2x2_north</uiIconPath>
+		<uiIconScale>0.75</uiIconScale>
+		<size>(2,2)</size>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints> 
+			<Mass>16</Mass>
+			<WorkToBuild>1000</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		</statBases>
+				
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/Timber2x2</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(4,4)</drawSize>
+                </emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>4~16</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Wood</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+
+  	<!-- ==================== Bricks Base ==================== -->
+	
+	<!--== Bricks 1x1 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_Bricks1x1c</defName>
+		<label>bricks (1x1)</label>
+		<description>Bricks that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/Bricks1x1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/Bricks1x1</uiIconPath>
+		<uiIconScale>0.5</uiIconScale>
+		<size>(1,1)</size>
+
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints> 
+			<Mass>4</Mass>
+			<WorkToBuild>250</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+		</statBases>
+				
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/Bricks1x1</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(2,2)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>BlocksLimestone</li>
+                    <li>BlocksSandstone</li>
+                    <li>BlocksGranite</li>
+                    <li>BlocksMarble</li>
+                    <li>BlocksSlate</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Bricks 1x2 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_Bricks1x2c</defName>
+		<label>bricks (1x2)</label>
+		<description>Bricks that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/Bricks1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/Bricks1x2_north</uiIconPath>
+		<uiIconScale>1</uiIconScale>
+		<size>(2,1)</size>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints> 
+			<Mass>8</Mass>
+			<WorkToBuild>500</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		</statBases>
+				
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>		
+		<costStuffCount>20</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/Bricks1x2</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(2,2)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>BlocksLimestone</li>
+                    <li>BlocksSandstone</li>
+                    <li>BlocksGranite</li>
+                    <li>BlocksMarble</li>
+                    <li>BlocksSlate</li>
+				</randomItems>
+			</li>
+		</modExtensions>			
+	</ThingDef>
+	
+	<!--== Bricks 2x2 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_Bricks2x2c</defName>
+		<label>bricks (2x2)</label>
+		<description>Bricks that are stacked in an efficient manner to save more space.</description>
+		<graphicData>
+			<texPath>Storage/Bricks2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/Bricks2x2</uiIconPath>
+		<uiIconScale>0.75</uiIconScale>
+		<size>(2,2)</size>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints> 
+			<Mass>16</Mass>
+			<WorkToBuild>1000</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		</statBases>
+					
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>	
+		<costStuffCount>20</costStuffCount>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/Bricks2x2</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(4,4)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>4~16</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>BlocksLimestone</li>
+                    <li>BlocksSandstone</li>
+                    <li>BlocksGranite</li>
+                    <li>BlocksMarble</li>
+                    <li>BlocksSlate</li>
+				</randomItems>
+			</li>
+		</modExtensions>			
+	</ThingDef>
+
+  	<!-- ==================== Cupboard Base ==================== -->
+
+	<!--== Cupboard Bread 1x3 ==-->
+  	<ThingDef ParentName="DankPyon_Lootable_Storage" Name="DankPyon_Loot_Cupboard">
+		<defName>DankPyon_Loot_CupboardBread</defName>
+		<label>bread cupboard</label>
+		<description>An open cupboard to store and display objects in an efficient manner.</description>
+		<graphicData>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>Storage/CupboardBread</texPath>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(5,3)</drawSize>
+		</graphicData>
+		
+		<size>(3,1)</size>
+		<uiIconScale>2</uiIconScale>
+
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints> 
+			<Mass>12</Mass>
+			<WorkToBuild>750</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">7.5</StyleDominance>
+		</statBases>
+		
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+
+		<uiIconPath>Storage/CupboardBread_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/CupboardEmpty</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(5,3)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>3~12</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_MealBread</li>
+				</randomItems>
+			</li>
+		</modExtensions>			
+	</ThingDef>
+	
+	<!--== Cupboard Cheese 1x3 ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Cupboard">
+		<defName>DankPyon_Loot_CupboardCheese</defName>
+		<label>cheese cupboard</label>
+		<graphicData>
+			<texPath>Storage/CupboardCheese</texPath>
+		</graphicData>
+		<uiIconPath>Storage/CupboardCheese_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/CupboardEmpty</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(5,3)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>3~12</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Cheese</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Cupboard Wine 1x3 ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Cupboard">
+		<defName>DankPyon_Loot_CupboardWine</defName>
+		<label>wine cupboard</label>
+		<graphicData>
+			<texPath>Storage/CupboardDrug</texPath>
+		</graphicData>
+		<uiIconPath>Storage/CupboardDrug_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/CupboardEmpty</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(5,3)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>3~12</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Wine</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+
+  	<!-- ==================== Big Ressource Barrel Base ==================== -->
+	
+    <ThingDef Name="DankPyon_Loot_BigBarrel" ParentName="DankPyon_Lootable_Storage" Abstract="True">
+		<description>A cylindrical barrel for general storage. Items stored in this will not affect room beauty and they won't deteriorate, even if outside.</description>
+		<graphicData>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		
+		<size>(2,2)</size>
+		<uiIconScale>0.75</uiIconScale>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints> 
+			<Mass>16</Mass>
+			<WorkToBuild>1000</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+		</statBases>
+		
+		<costList>
+			<Steel>5</Steel>
+		</costList>		
+		
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    </ThingDef>
+	
+	<!--== Big Barrel Grape 2x2 ==-->
+  	<ThingDef ParentName="DankPyon_Loot_BigBarrel">
+		<defName>DankPyon_Loot_BarrelBigGrape</defName>
+		<label>large grape barrel</label>
+		<graphicData>
+			<texPath>Storage/BarrelBigGrape</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelBigGrape</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/BarrelClosed</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <drawSize>(4,4)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>4~16</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawGrapes</li>
+				</randomItems>
+			</li>
+		</modExtensions>	
+	</ThingDef>
+	
+	<!--== Big Barrel Must 2x2 ==-->
+  	<ThingDef ParentName="DankPyon_Loot_BigBarrel">
+		<defName>DankPyon_Loot_BarrelBigMust</defName>
+		<label>large wine must barrel</label>
+		<graphicData>
+			<texPath>Storage/BarrelBigDown</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelBigDown_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+                <emptyGraphicData>
+                    <texPath>Storage/BarrelBigDown</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>(4,4)</drawSize>
+				</emptyGraphicData>	
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>4~16</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_MustWine</li>
+				</randomItems>
+			</li>
+		</modExtensions>	
+	</ThingDef>	
+
+  	<!-- ==================== Ressource Barrel Base ==================== -->
+	
+    <ThingDef Name="DankPyon_Loot_SmallBarrel" ParentName="DankPyon_Lootable_Storage" Abstract="True">
+		<description>A cylindrical barrel for general storage. Items stored in this will not affect room beauty and they won't deteriorate, even if outside.</description>
+		<graphicData>	
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		
+		<size>(1,1)</size>
+		<uiIconScale>1.5</uiIconScale>
+
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints> 
+			<Mass>4</Mass>
+			<WorkToBuild>250</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+		</statBases>
+
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+    </ThingDef>
+	
+	<!--== Wood Log Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelWoodLog</defName>
+		<label>barrel of wood</label>
+		<graphicData>
+			<texPath>Storage/BarrelWoodLog</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelWoodLog</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawWood</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Iron Ore Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelIronOre</defName>
+		<label>barrel of iron ore</label>
+		<graphicData>
+			<texPath>Storage/BarrelIronOre</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelIronOre</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_IronOre</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Silver Ore Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelSilverOre</defName>
+		<label>barrel of silver ore</label>
+		<graphicData>
+			<texPath>Storage/BarrelSilverOre</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelSilverOre</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_SilverOre</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Gold Ore Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelGoldOre</defName>
+		<label>barrel of gold ore</label>
+		<graphicData>
+			<texPath>Storage/BarrelGoldOre</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelGoldOre</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_GoldOre</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Coal Ore Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelCoalOre</defName>
+		<label>barrel of coal ore</label>
+		<graphicData>
+			<texPath>Storage/BarrelCoalOre</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelCoalOre</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Coal</li>
+				</randomItems>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<!--== Textile Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelTextiles</defName>
+		<label>barrel of textiles</label>
+		<graphicData>
+			<texPath>Storage/BarrelTextiles</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelTextiles</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>Cloth</li>
+				</randomItems>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<!--== Leather Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelLeather</defName>
+		<label>barrel of textiles</label>
+		<graphicData>
+			<texPath>Storage/BarrelLeather</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelLeather</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+                    <li>Leather_Plain</li>
+					<li>DankPyon_Leather_Daer</li>
+				</randomItems>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<!--== Basic Component Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelComponentBasic</defName>
+		<label>barrel of basic components</label>
+		<graphicData>
+			<texPath>Storage/BarrelComponentBasic</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelComponentBasic</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_ComponentBasic</li>
+				</randomItems>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<!--== Grape Barrel ==-->
+  	<ThingDef ParentName="DankPyon_Loot_SmallBarrel">
+		<defName>DankPyon_Loot_BarrelGrape</defName>
+		<label>barrel of grape</label>
+		<graphicData>
+			<texPath>Storage/BarrelGrape</texPath>
+		</graphicData>
+		<uiIconPath>Storage/BarrelGrape</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/BarrelClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawGrapes</li>
+				</randomItems>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+  	<!-- ==================== Shelf Base ==================== -->
+	
+    <ThingDef Name="DankPyon_Loot_Shelf" ParentName="DankPyon_Lootable_Storage" Abstract="True">
+		<description>A large square platform designed to store things, keeping them clean and off the ground.</description>
+		
+		<size>(2,2)</size>
+		<uiIconScale>1</uiIconScale>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints> 
+			<Mass>16</Mass>
+			<WorkToBuild>1000</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+		</statBases>
+
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    </ThingDef>
+	
+	<!--== Large Shelf Bread ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Shelf">
+		<defName>DankPyon_Loot_LargeShelf_Bread</defName>
+		<label>large bread shelf</label>
+		<graphicData>
+			<texPath>Storage/StackBread</texPath>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/StackBread_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(4,4)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_MealBread</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Large Shelf Grain ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Shelf">
+		<defName>DankPyon_Loot_LargeShelf_Grain</defName>
+		<label>large grain shelf</label>
+		<graphicData>
+			<texPath>Storage/StackFlour</texPath>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/StackFlour_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(4,4)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Flour</li>
+					<li>DankPyon_RawWheat</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Large Shelf Meat ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Shelf">
+		<defName>DankPyon_Loot_LargeShelf_Meat</defName>
+		<label>large meat shelf</label>
+		<graphicData>
+			<texPath>Storage/StackMeat</texPath>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/StackMeat_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(4,4)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_DriedMeat</li>
+					<li>DankPyon_SmokedMeat</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Large Shelf Cheese ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Shelf">
+		<defName>DankPyon_Loot_LargeShelf_Cheese</defName>
+		<label>large cheese shelf</label>
+		<graphicData>
+			<texPath>Storage/StackCheese</texPath>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/StackCheese_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(4,4)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Cheese</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Large Shelf Wine ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Shelf">
+		<defName>DankPyon_LargeShelf_Wine</defName>
+		<label>large wine shelf</label>
+		<graphicData>
+			<texPath>Storage/StackDrug</texPath>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/StackDrug_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(4,4)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Wine</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Large Shelf Mead ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Shelf">
+		<defName>DankPyon_LargeShelf_Mead</defName>
+		<label>large mead shelf</label>
+		<graphicData>
+			<texPath>Storage/StackMead</texPath>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/StackMead_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(4,4)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li><!--DankPyon_Maed--></li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Large Shelf Vegetables ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Shelf">
+		<defName>DankPyon_LargeShelf_Vegetables</defName>
+		<label>large vegetables shelf</label>
+		<graphicData>
+			<texPath>Storage/StackVegetables</texPath>	
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/StackVegetables_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(4,4)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawPumpkins</li>
+					<li>DankPyon_RawOnions</li>
+					<li>DankPyon_RawLentils</li>
+					<li>DankPyon_RawGarlic</li>
+					<li>DankPyon_RawCarrots</li>
+					<li>DankPyon_RawCabbages</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+
+  	<!-- ==================== Sack Base ==================== -->
+	
+    <ThingDef Name="DankPyon_Loot_Sack" ParentName="DankPyon_Lootable_Storage" Abstract="True">
+		<description>A robust fabric bag designed to store objects in a more efficient manner.</description>
+		
+		<size>(1,1)</size>
+		<uiIconScale>1</uiIconScale>
+
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints> 
+			<Mass>4</Mass>
+			<WorkToBuild>250</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+		</statBases>
+
+		<costList>
+			<DankPyon_Linen>10</DankPyon_Linen>
+		</costList>
+    </ThingDef>
+	
+	<!--== Sack Flour ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Sack">
+		<defName>DankPyon_Loot_SackFlour</defName>
+		<label>sack of flour</label>
+		<graphicData>
+			<texPath>Storage/SackFlour</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<uiIconPath>Storage/SackFlour</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/SackClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Flour</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Sack Wheat ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Sack">
+		<defName>DankPyon_Loot_SackWheat</defName>
+		<label>sack of wheat</label>
+		<graphicData>
+			<texPath>Storage/SackWheat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<uiIconPath>Storage/SackWheat</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/SackClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawWheat</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Sack Potato ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Sack">
+		<defName>DankPyon_Loot_SackPotato</defName>
+		<label>sack of potatoes</label>
+		<graphicData>
+			<texPath>Storage/SackPotato</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<uiIconPath>Storage/SackPotato</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/SackClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>RawPotatoes</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Sack Apple ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Sack">
+		<defName>DankPyon_Loot_SackApple</defName>
+		<label>sack of apples</label>
+		<graphicData>
+			<texPath>Storage/SackApple</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<uiIconPath>Storage/SackApple</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/SackClosed</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>1~4</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_RawApples</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+
+  	<!-- ==================== Rack Base ==================== -->
+	
+    <ThingDef Name="DankPyon_Loot_Rack" ParentName="DankPyon_Lootable_Storage" Abstract="True">
+		<description>A shelf for storing miscellaneous items. Items stored in this will not affect room beauty and they won't deteriorate, even if outside.</description>
+		
+		<size>(2,1)</size>
+		<uiIconScale>1</uiIconScale>
+		<defaultPlacingRot>South</defaultPlacingRot>
+
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints> 
+			<Mass>4</Mass>
+			<WorkToBuild>250</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+		</statBases>
+
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
+    </ThingDef>
+	
+	<!--== Sword Rack ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Rack">
+		<defName>DankPyon_Loot_RackSword</defName>
+		<label>sword rack</label>
+		<graphicData>
+			<texPath>Storage/RackFilled2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/RackFilled2_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/RackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(3,3)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_MeleeWeapon_Falchion</li>
+                    <li>DankPyon_MeleeWeapon_ArmingSword</li>
+                    <li>DankPyon_MeleeWeapon_FencingSword</li>
+                    <li>DankPyon_MeleeWeapon_NobleSword</li>
+                    <li>DankPyon_MeleeWeapon_Longsword</li>
+                    <li>DankPyon_MeleeWeapon_Greatsword</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Spear Rack ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Rack">
+		<defName>DankPyon_Loot_RackSpear</defName>
+		<label>spear rack</label>
+		<graphicData>
+			<texPath>Storage/RackFilled3</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/RackFilled3_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/RackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(3,3)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_MeleeWeapon_MilitiaSpear</li>
+                    <li>DankPyon_MeleeWeapon_BoarSpear</li>
+                    <li>DankPyon_MeleeWeapon_BoarSpear</li>
+                    <li>DankPyon_MeleeWeapon_FightingSpear</li>
+                    <li>DankPyon_MeleeWeapon_Warfork</li>
+                    <li>DankPyon_MeleeWeapon_Spetum</li>
+                    <li>DankPyon_MeleeWeapon_Pitchfork</li>
+                    <li>DankPyon_MeleeWeapon_HookedBlade</li>
+                    <li>DankPyon_MeleeWeapon_Billhook</li>
+                    <li>DankPyon_MeleeWeapon_Pike</li>
+                    <li>DankPyon_MeleeWeapon_Halberd</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+	
+	<!--== Mixed Rack ==-->
+  	<ThingDef ParentName="DankPyon_Loot_Rack">
+		<defName>DankPyon_Loot_RackMixed</defName>
+		<label>weapon rack</label>
+		<graphicData>
+			<texPath>Storage/RackFilled1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<uiIconPath>Storage/RackFilled1_north</uiIconPath>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/RackEmpty</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(3,3)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_MeleeWeapon_Falchion</li>
+                    <li>DankPyon_MeleeWeapon_ArmingSword</li>
+                    <li>DankPyon_MeleeWeapon_FencingSword</li>
+                    <li>DankPyon_MeleeWeapon_NobleSword</li>
+                    <li>DankPyon_MeleeWeapon_Longsword</li>
+                    <li>DankPyon_MeleeWeapon_Greatsword</li>
+
+                    <li>DankPyon_MeleeWeapon_MilitiaSpear</li>
+                    <li>DankPyon_MeleeWeapon_BoarSpear</li>
+                    <li>DankPyon_MeleeWeapon_BoarSpear</li>
+                    <li>DankPyon_MeleeWeapon_FightingSpear</li>
+                    <li>DankPyon_MeleeWeapon_Warfork</li>
+                    <li>DankPyon_MeleeWeapon_Spetum</li>
+                    <li>DankPyon_MeleeWeapon_Pitchfork</li>
+                    <li>DankPyon_MeleeWeapon_HookedBlade</li>
+                    <li>DankPyon_MeleeWeapon_Billhook</li>
+                    <li>DankPyon_MeleeWeapon_Pike</li>
+                    <li>DankPyon_MeleeWeapon_Halberd</li>
+
+                    <li>DankPyon_MeleeWeapon_Hatchet</li>
+                    <li>DankPyon_MeleeWeapon_Handaxe</li>
+                    <li>DankPyon_MeleeWeapon_FightingAxe</li>
+                    <li>DankPyon_MeleeWeapon_WoodcuttersAxe</li>
+                    <li>DankPyon_MeleeWeapon_Bardiche</li>
+                    <li>DankPyon_MeleeWeapon_Greataxe</li>
+                    <li>DankPyon_MeleeWeapon_Longaxe</li>
+				</randomItems>
+			</li>
+		</modExtensions>		
+	</ThingDef>
+
+  	<!-- ==================== Straw ==================== -->
+	
+    <ThingDef ParentName="DankPyon_Lootable_Storage">
+		<defName>DankPyon_Loot_StrawPile</defName>
+		<label>straw pile</label>
+		<description>Why is straw lying here?</description>
+		<graphicData>	
+			<texPath>Storage/StrawPile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2.70,2.70)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		
+		<size>(2,1)</size>
+		<uiIconScale>1</uiIconScale>
+		<defaultPlacingRot>North</defaultPlacingRot>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints> 
+			<Mass>8</Mass>
+			<WorkToBuild>500</WorkToBuild>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		</statBases>
+		
+		<costList>
+			<DankPyon_Straw>20</DankPyon_Straw>
+		</costList>
+		
+        <modExtensions>
+			<li Class="MedievalOverhaul.BuildingLootableExtension">
+				<enemysToSpawn>
+				    <li>Rat</li>
+				</enemysToSpawn>
+				<enemySpawnChance>0.10</enemySpawnChance>
+                <hostileEnemy>false</hostileEnemy>
+				<emptyGraphicData>
+					<texPath>Storage/StrawPile</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.70,2.70)</drawSize>
+				</emptyGraphicData>
+				<searchSound>BuildingDestroyed_Wood_Medium</searchSound>
+				<searchEffect>DustPuff</searchEffect>
+				<effectSize>2.5</effectSize>
+				<lootCount>2~8</lootCount>
+				<lootChance>0.90</lootChance>
+				<isRandom>true</isRandom>
+				<randomItems>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+                    <li>DankPyon_Straw</li>
+				</randomItems>				
+			</li>
+		</modExtensions>
+    </ThingDef>
+	
+</Defs>	

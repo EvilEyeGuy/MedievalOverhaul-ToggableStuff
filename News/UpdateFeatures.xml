@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="MO_Stuff_UpdateBase">
+		<modNameReadable>Medieval Overhaul Toggable Stuff</modNameReadable>
+		<modIdentifier>Accurex.MedievalOverhaul.Stuff</modIdentifier>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2898440531</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	
+	<HugsLib.UpdateFeatureDef ParentName="MO_Stuff_UpdateBase">
+		<defName>MOTS_Mineables</defName>
+		<assemblyVersion>0.1</assemblyVersion>
+		<content>I have added a function to restore the vanilla map generation. So you can toggle the generation of vanilla mineables during map creation.
+However, you have to restart the game after you have activated it.</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
