@@ -12,59 +12,59 @@
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="TorchLamp"]/comps/li[2]</xpath>
-		</li><!--
+		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="TorchLamp"]/inspectorTabs</xpath>
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="TorchLamp"]/comps/li[@Class="ESCP_FuelExtension.CompProperties_StoreFuelThing"]</xpath>
 		</li>
--->
+
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallTorch"]/comps/li[4]</xpath>
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallTorch"]/comps/li[2]</xpath>
-		</li><!--
+		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallTorch"]/inspectorTabs</xpath>
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallTorch"]/comps/li[@Class="ESCP_FuelExtension.CompProperties_StoreFuelThing"]</xpath>
 		</li>
--->
+
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallLamp"]/comps/li[4]</xpath>
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallLamp"]/comps/li[2]</xpath>
-		</li><!--
+		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallLamp"]/inspectorTabs</xpath>
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_WallLamp"]/comps/li[@Class="ESCP_FuelExtension.CompProperties_StoreFuelThing"]</xpath>
 		</li>
--->
+
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_LampPost"]/comps/li[4]</xpath>
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_LampPost"]/comps/li[2]</xpath>
-		</li><!--
+		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_LampPost"]/inspectorTabs</xpath>
 		</li>
 		<li Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[defName="DankPyon_LampPost"]/comps/li[@Class="ESCP_FuelExtension.CompProperties_StoreFuelThing"]</xpath>
 		</li>
--->
+
 		<li Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[defName="DankPyon_WoodBurningStove"]/comps/li[@Class="CompProperties_HeatPusher"]</xpath>
 			<value>
 				<li Class="CompProperties_HeatPusher">
 					<compClass>CompHeatPusherPowered</compClass>
-					<heatPerSecond>15</heatPerSecond>
+					<heatPerSecond>16</heatPerSecond>
 					<heatPushMaxTemperature>25</heatPushMaxTemperature>
 				</li>
 			</value>

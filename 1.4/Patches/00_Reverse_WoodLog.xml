@@ -41,6 +41,23 @@
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/ThingDef[defName="WoodLog"]/uiIconPath</xpath>
 			</li>
+
+			<li Class="PatchOperationTest">
+				<xpath>Defs/ThingDef[defName="WoodLog"]</xpath>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="WoodLog"]/comps</xpath>
+				<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="WoodLog"]</xpath>
+				<value>
+					<comps>
+						<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+							<rate>2</rate>
+						</li>
+					</comps>
+				</value>
+				</nomatch>
+			</li>
 			
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/ThingDef[defName="PassiveCooler"]/stuffCategories</xpath>
@@ -92,10 +109,6 @@
 					</li>
 				</value>
 			</li>
-<!-- 
-
-ACTIVATE AFTER UPDATE 
-
 
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName="MakeTanningLiquorFromWood"]/ingredients/li/filter/categories</xpath>
@@ -116,7 +129,7 @@ ACTIVATE AFTER UPDATE
 					</categories>
 				</value>
 			</li>
-			
+
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName="MakeTanningLiquorFromWood10X"]/ingredients/li/filter/categories</xpath>
 				<value>
@@ -136,7 +149,7 @@ ACTIVATE AFTER UPDATE
 					</categories>
 				</value>
 			</li>
--->			
+
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[
 				defName="DankPyon_WoodLogs1x1c" or
@@ -153,13 +166,13 @@ ACTIVATE AFTER UPDATE
 							</filter>
 						</fixedStorageSettings>
 						<defaultStorageSettings>
-						<priority>Normal</priority>
+							<priority>Normal</priority>
 							<filter>
 								<thingDefs>
 									<li>WoodLog</li>
 								</thingDefs>
 							</filter>
-								</defaultStorageSettings>
+						</defaultStorageSettings>
 					</building>
 				</value>
 			</li>
@@ -241,24 +254,25 @@ ACTIVATE AFTER UPDATE
 					<graphicData>
 						<texPath>Resources/WoodPlank</texPath>
 						<graphicClass>Graphic_StackCount</graphicClass>
+						<color>(160, 122, 91)</color>
 					</graphicData>
 					<uiIconPath>UI/IconWood</uiIconPath>
 					<equippedAngleOffset>-20</equippedAngleOffset>
 					<soundInteract>Wood_Drop</soundInteract>
 					<soundDrop>Wood_Drop</soundDrop>
 					<statBases>
-					  <MarketValue>0.5</MarketValue>
-					  <MaxHitPoints>100</MaxHitPoints>
-					  <Mass>0.2</Mass> 
-					  <Flammability>1.0</Flammability>
-					  <DeteriorationRate>0.5</DeteriorationRate>
-					  <StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
-					  <StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
-					  <StuffPower_Armor_Heat>0.40</StuffPower_Armor_Heat>
-					  <StuffPower_Insulation_Cold>7</StuffPower_Insulation_Cold>
-					  <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
-					  <SharpDamageMultiplier>0.40</SharpDamageMultiplier>
-					  <BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+						<MarketValue>0.5</MarketValue>
+						<MaxHitPoints>100</MaxHitPoints>
+						<Mass>0.2</Mass> 
+						<Flammability>1.0</Flammability>
+						<DeteriorationRate>0.5</DeteriorationRate>
+						<StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
+						<StuffPower_Armor_Heat>0.40</StuffPower_Armor_Heat>
+						<StuffPower_Insulation_Cold>7</StuffPower_Insulation_Cold>
+						<StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
+						<SharpDamageMultiplier>0.40</SharpDamageMultiplier>
+						<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
 					</statBases>
 					<burnableByRecipe>true</burnableByRecipe>
 					<healthAffectsPrice>false</healthAffectsPrice>
@@ -269,7 +283,7 @@ ACTIVATE AFTER UPDATE
 						<li>Woody</li>
 					  </categories>
 					  <commonality>1.00</commonality>
-					  <color>(160, 122, 91))</color>
+					  <color>(160, 122, 91)</color>
 					  <constructEffect>ConstructWood</constructEffect>
 					  <appearance>Planks</appearance>
 					  <soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
@@ -310,6 +324,11 @@ ACTIVATE AFTER UPDATE
 					</tools>
 					<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 					<allowedArchonexusCount>150</allowedArchonexusCount>
+					<comps>
+						<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+							<rate>1</rate>
+						</li>
+					</comps>
 				  </ThingDef>
 				</value>
 			</li>
@@ -524,8 +543,6 @@ ACTIVATE AFTER UPDATE
 					</value>
 				</nomatch>
 			</li>
-			
-			
 		</operations>
 	</Operation>
 </Patch>	

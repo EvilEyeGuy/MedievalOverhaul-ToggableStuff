@@ -12,4 +12,11 @@
 		<content>I have added a function to restore the vanilla map generation. So you can toggle the generation of vanilla mineables during map creation.
 However, you have to restart the game after you have activated it.</content>
 	</HugsLib.UpdateFeatureDef>
+	
+	<HugsLib.UpdateFeatureDef ParentName="MO_Stuff_UpdateBase">
+		<defName>MOTS_MOUpdate_FuelFilters</defName>
+		<assemblyVersion>0.2</assemblyVersion>
+		<content>Due to the MO update, I have had to adjust the fuel filters. 
+Also, the DrawOffSet function has been removed as it is now part of MO.</content>
+	</HugsLib.UpdateFeatureDef>
 </Defs>
