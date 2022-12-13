@@ -19,4 +19,14 @@ However, you have to restart the game after you have activated it.</content>
 		<content>Due to the MO update, I have had to adjust the fuel filters. 
 Also, the DrawOffSet function has been removed as it is now part of MO.</content>
 	</HugsLib.UpdateFeatureDef>
+	
+	<HugsLib.UpdateFeatureDef ParentName="MO_Stuff_UpdateBase">
+		<defName>MOTS_MOUpdate_AnimalHoods</defName>
+		<assemblyVersion>0.3</assemblyVersion>
+		<content>This function is deactivated by default. If it is activated, the animal helmets (grizzly bear, polar bear, arctic wolf, timber wolf) can be worn over the regular helmets.|img:/News/221213</content>
+	</HugsLib.UpdateFeatureDef>
+	
+	
+	
+	<content>img:letter</content>
 </Defs>
