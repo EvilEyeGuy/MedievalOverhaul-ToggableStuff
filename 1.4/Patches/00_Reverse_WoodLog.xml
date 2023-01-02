@@ -59,20 +59,18 @@
 				</nomatch>
 			</li>
 			
-			<li Class="PatchOperationRemove">
+			<!--li Class="PatchOperationRemove">
 				<xpath>Defs/ThingDef[defName="PassiveCooler"]/stuffCategories</xpath>
 			</li>
 			
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/ThingDef[defName="PassiveCooler"]/costStuffCount</xpath>
-			</li>
+			</li-->
 
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="PassiveCooler"]</xpath>
+				<xpath>Defs/ThingDef[defName="PassiveCooler"]/stuffCategories</xpath>
 				<value>
-					<costList>
-						<WoodLog>50</WoodLog>
-					</costList>
+					<li>Woody</li>
 				</value>
 			</li>
 			

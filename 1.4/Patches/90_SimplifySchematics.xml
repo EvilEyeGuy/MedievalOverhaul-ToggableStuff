@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<mods>
+		  <li>Medieval Overhaul</li>
+		</mods>
+		<label>[Tech] Reduce the required research schematics:</label>
+		<operations>
+		
+			<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+				<value>
+					<ThingDef ParentName="DankPyon_BookBuildingBase">
+						<defName>EEG_Tier2_Ressources</defName>
+						<label>advanced ressources</label>
+						<graphicData>
+						<texPath>Misc/Books/Steel_Book</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<drawSize>(2,2)</drawSize>
+						</graphicData>
+						
+						<tradeTags>
+							<li>EEG_Books</li>
+						</tradeTags>
+						
+						<statBases>
+							<MarketValue>1000</MarketValue>
+							<MaxHitPoints>100</MaxHitPoints>
+							<Beauty>20</Beauty>
+							<Mass>1</Mass>
+							<Flammability>1</Flammability>
+						</statBases>
+					</ThingDef>
+				</value>
+			</li>
+		
+			<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+				<value>
+					<ThingDef ParentName="DankPyon_BookBuildingBase">
+						<defName>EEG_Tier3_Melee</defName>
+						<label>advanced melee weapons</label>
+						<graphicData>
+						<texPath>Misc/Books/BladesNoble_Book</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<drawSize>(2,2)</drawSize>
+						</graphicData>
+						
+						<tradeTags>
+							<li>EEG_Books</li>
+						</tradeTags>
+
+						<statBases>
+							<MarketValue>1200</MarketValue>
+							<MaxHitPoints>100</MaxHitPoints>
+							<Beauty>20</Beauty>
+							<Mass>1</Mass>
+							<Flammability>1</Flammability>
+						</statBases>
+					</ThingDef>
+				</value>
+			</li>
+		
+			<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+				<value>
+					<ThingDef ParentName="DankPyon_BookBuildingBase">
+						<defName>EEG_Tier3_Ranged</defName>
+						<label>advanced ranged weapons</label>
+						<graphicData>
+						<texPath>Misc/Books/Arbalest_Book</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<drawSize>(2,2)</drawSize>
+						</graphicData>
+						
+						<tradeTags>
+							<li>EEG_Books</li>
+						</tradeTags>
+
+						<statBases>
+							<MarketValue>1200</MarketValue>
+							<MaxHitPoints>100</MaxHitPoints>
+							<Beauty>20</Beauty>
+							<Mass>1</Mass>
+							<Flammability>1</Flammability>
+						</statBases>
+					</ThingDef>
+				</value>
+			</li>
+		
+			<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+				<value>
+					<ThingDef ParentName="DankPyon_BookBuildingBase">
+						<defName>EEG_Tier3_Fortification</defName>
+						<label>advanced fortification</label>
+						<graphicData>
+						<texPath>Misc/Books/BallistaRepeater_Book</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<drawSize>(2,2)</drawSize>
+						</graphicData>
+						
+						<tradeTags>
+							<li>EEG_Books</li>
+						</tradeTags>
+
+						<statBases>
+							<MarketValue>600</MarketValue>
+							<MaxHitPoints>100</MaxHitPoints>
+							<Beauty>20</Beauty>
+							<Mass>1</Mass>
+							<Flammability>1</Flammability>
+						</statBases>
+					</ThingDef>
+				</value>
+			</li>
+		
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+			<value>
+				<li>EEG_Tier3_Fortification</li>
+				<li>EEG_Tier3_Ranged</li>
+				<li>EEG_Tier3_Melee</li>
+				<li>EEG_Tier2_Ressources</li>
+			</value>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_Crossbow" or
+				defName="DankPyon_MilitaryPolearms"  or
+				defName="DankPyon_MilitaryMaces"  or
+				defName="DankPyon_MilitaryBlades" or
+				defName="DankPyon_WarBow" or
+				defName="DankPyon_IntermediateCooking"
+				][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>Defs/ResearchProjectDef[
+					defName="DankPyon_Crossbow" or
+					defName="DankPyon_MilitaryPolearms"  or
+					defName="DankPyon_MilitaryMaces"  or
+					defName="DankPyon_MilitaryBlades" or
+					defName="Greatbow" or
+					defName="DankPyon_IntermediateCooking"
+					][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_Steel" or
+				defName="DankPyon_Tar" or
+				defName="DankPyon_AdvancedCooking"
+				][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[
+					defName="DankPyon_Steel" or
+					defName="DankPyon_Tar" or
+					defName="DankPyon_AdvancedCooking"
+					][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+					<value>
+						<requiredResearchFacilities><li>EEG_Tier2_Ressources</li></requiredResearchFacilities>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ResearchProjectDef[
+				defName="Greatbow" or
+				defName="LongBlades"  or
+				defName="DankPyon_NoblePolearms"  or
+				defName="DankPyon_NobleMaces"  or
+				defName="DankPyon_Trebuchet" or
+				defName="DankPyon_RepeaterBallista"
+				][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[
+					defName="Greatbow" or
+					defName="LongBlades"  or
+					defName="DankPyon_NoblePolearms"  or
+					defName="DankPyon_NobleMaces"  or
+					defName="DankPyon_Trebuchet" or
+					defName="DankPyon_RepeaterBallista"
+					][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+					<value>
+						<requiredResearchFacilities><li>EEG_Tier3_Melee</li></requiredResearchFacilities>
+					</value>
+				</match>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_HeavyCrossbow" or
+				defName="DankPyon_WarBow" or
+				defName="DankPyon_Gunpowder"
+				][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[
+					defName="DankPyon_HeavyCrossbow" or
+					defName="DankPyon_WarBow" or
+					defName="DankPyon_Gunpowder"
+					][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+					<value>
+						<requiredResearchFacilities><li>EEG_Tier3_Ranged</li></requiredResearchFacilities>
+					</value>
+				</match>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_RepeaterBallista" or
+				defName="DankPyon_Trebuchet"
+				]/requiredResearchFacilities</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[
+					defName="DankPyon_RepeaterBallista" or
+					defName="DankPyon_Trebuchet"
+					]/requiredResearchFacilities</xpath>
+					<value>
+						<requiredResearchFacilities><li>EEG_Tier3_Fortification</li></requiredResearchFacilities>
+					</value>
+				</match>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_MilitaryPolearms" or
+				defName="DankPyon_MilitaryMaces" or
+				defName="DankPyon_MilitaryBlades" or
+				defName="Greatbow"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>1200</baseCost>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Scholar"]/stockGenerators/li[2]</xpath>
+				<value>
+					<li Class="StockGenerator_MarketValue">
+						<tradeTag>EEG_Books</tradeTag>
+						<countRange>2~4</countRange>
+					</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DankPyon_LootableShelf_Book"]/modExtensions/li[1]/randomItems</xpath>
+				<value>
+					<randomItems><!--17 non-treatise : 12 treatise -->
+						<li>DankPyon_Book</li>
+						<li>DankPyon_Book</li>
+						<li>DankPyon_Book</li>
+						<li>DankPyon_Book</li>
+						<li>DankPyon_Book</li>
+						<li>DankPyon_Book</li>
+						<li>DankPyon_Book_TheBeginning</li>
+						<li>DankPyon_Book_IntoTheRuins</li>
+						<li>DankPyon_Book_AncientCodex</li>
+						<li>DankPyon_TornNote_Song1c</li>
+						<li>DankPyon_Treatise_Shooting</li>
+						<li>DankPyon_Treatise_Melee</li>
+						<li>DankPyon_Treatise_Construction</li>
+						<li>DankPyon_Treatise_Mining</li>
+						<li>DankPyon_Treatise_Cooking</li>
+						<li>DankPyon_Treatise_Plants</li>
+						<li>DankPyon_Treatise_Animals</li>
+						<li>DankPyon_Treatise_Crafting</li>
+						<li>DankPyon_Treatise_Artistic</li>
+						<li>DankPyon_Treatise_Medicine</li>
+						<li>DankPyon_Treatise_Social</li>
+						<li>DankPyon_Treatise_Intellectual</li>
+						
+						<li>EEG_Tier2_Ressources</li>
+						<li>EEG_Tier2_Ressources</li>
+						<li>EEG_Tier2_Ressources</li>
+						<li>EEG_Tier2_Ressources</li>
+						<li>EEG_Tier3_Fortification</li>
+						<li>EEG_Tier3_Fortification</li>
+						<li>EEG_Tier3_Fortification</li>
+						<li>EEG_Tier3_Fortification</li>
+						<li>EEG_Tier3_Melee</li>
+						<li>EEG_Tier3_Melee</li>
+						<li>EEG_Tier3_Melee</li>
+						<li>EEG_Tier3_Melee</li>
+						<li>EEG_Tier3_Ranged</li>
+						<li>EEG_Tier3_Ranged</li>
+						<li>EEG_Tier3_Ranged</li>
+						<li>EEG_Tier3_Ranged</li>
+					</randomItems>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>	

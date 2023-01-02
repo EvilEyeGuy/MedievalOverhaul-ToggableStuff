@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<mods>
+		  <li>Medieval Overhaul</li>
+		</mods>
+		<label>[Tech] Remove the required research schematics:</label>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_Crossbow" or
+				defName="DankPyon_HeavyCrossbow" or
+				defName="DankPyon_Trebuchet" or
+				defName="DankPyon_RepeaterBallista" or
+				defName="DankPyon_Steel" or
+				defName="DankPyon_Tar" or
+				defName="DankPyon_Gunpowder" or
+				defName="DankPyon_WarBow" or
+				defName="Greatbow" or
+				defName="DankPyon_MilitaryPolearms"  or
+				defName="DankPyon_NoblePolearms"  or
+				defName="DankPyon_MilitaryMaces"  or
+				defName="DankPyon_NobleMaces"  or
+				defName="DankPyon_MilitaryBlades"  or
+				defName="LongBlades"  or
+				defName="DankPyon_IntermediateCooking"  or
+				defName="DankPyon_AdvancedCooking"
+				][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+			</li>
+			
+			<!-- baseCost 400 -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_Crossbow" or
+				defName="DankPyon_Tar"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>1000</baseCost>
+				</value>
+			</li>
+			
+			<!-- baseCost 600 -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_MilitaryPolearms" or
+				defName="DankPyon_MilitaryMaces" or
+				defName="DankPyon_MilitaryBlades"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>1200</baseCost>
+				</value>
+			</li>
+			
+			<!-- baseCost 700 -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_HeavyCrossbow" or
+				defName="DankPyon_Gunpowder"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>1300</baseCost>
+				</value>
+			</li>
+			
+			<!-- baseCost 800 -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_AdvancedCooking"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>1400</baseCost>
+				</value>
+			</li>
+			
+			<!-- baseCost 1000 -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_Trebuchet" or
+				defName="DankPyon_Steel" or
+				defName="DankPyon_Gunpowder" or
+				defName="Greatbow" or
+				defName="DankPyon_NoblePolearms"  or
+				defName="DankPyon_NobleMaces"  or
+				defName="LongBlades"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>1600</baseCost>
+				</value>
+			</li>
+			
+			<!-- baseCost 1200 -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_WarBow"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>1800</baseCost>
+				</value>
+			</li>
+			
+			<!-- baseCost 2500 -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[
+				defName="DankPyon_RepeaterBallista"
+				][baseCost]/baseCost</xpath>
+				<value>
+					<baseCost>3100</baseCost>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]/../categories</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]/../categories</xpath>
+					<value>
+						<categories>
+							<li>Accurex_WoodenPlanks</li>
+							<li>Accurex_WoodenLogs</li>
+						</categories>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]/..</xpath>
+					<value>
+						<categories>
+							<li>Accurex_WoodenPlanks</li>
+							<li>Accurex_WoodenLogs</li>
+						</categories>
+					</value>
+				</nomatch>
+			</li>
+		</operations>
+	</Operation>
+</Patch>	

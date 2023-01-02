@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<mods>
+		  <li>Medieval Overhaul</li>
+		</mods>
+		<label>Restoring vanilla cloth production:</label>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Plant_Cotton"]/plant/harvestedThingDef</xpath>
+				<value>
+					<harvestedThingDef>Cloth</harvestedThingDef>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Plant_Cotton"]/plant/harvestYield</xpath>
+				<value>
+					<harvestYield>10</harvestYield>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+</Patch>	
