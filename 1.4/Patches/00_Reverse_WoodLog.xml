@@ -58,56 +58,17 @@
 				</value>
 				</nomatch>
 			</li>
-			
-			<!--li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="PassiveCooler"]/stuffCategories</xpath>
+						
+			<li Class="PatchOperationReplace">
+				<xpath>//stuffCategories/li[text() = 'DankPyon_RawWood']/text()</xpath>
+				<value>Woody</value>
 			</li>
 			
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="PassiveCooler"]/costStuffCount</xpath>
-			</li-->
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="PassiveCooler"]/stuffCategories</xpath>
-				<value>
-					<li>Woody</li>
-				</value>
+			<li Class="PatchOperationSetName">
+			<xpath>/Defs/ThingDef/costList/DankPyon_RawWood</xpath>
+			  <name>WoodLog</name>
 			</li>
 			
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[
-				defName="DankPyon_LogTable1x2c" or
-				defName="DankPyon_LogTable1x3c" or
-				defName="DankPyon_LogTable1x4c" or
-				defName="DankPyon_LogTable2x4c" or
-				defName="DankPyon_LogChair" or
-				defName="DankPyon_LogBench1x2c" or
-				defName="DankPyon_LogBench1x3c" or
-				defName="DankPyon_LogBench1x4c" or
-				defName="DankPyon_BedLog"  or
-				defName="DankPyon_DryRack"  or
-				defName="DankPyon_TanningRack"  or
-				defName="DankPyon_ButchersBlock"  or
-				defName="DankPyon_MineShaft"  or
-				defName="DankPyon_GardeningBox"  or
-				defName="DankPyon_WoodLogs1x1c" or
-				defName="DankPyon_WoodLogs1x2c" or
-				defName="DankPyon_WoodLogs2x2c" or
-				defName="DankPyon_LogGate" or
-				defName="DankPyon_Frame_Log" or
-				defName="DankPyon_LogWall" or
-				defName="DankPyon_Palisade" or
-				defName="DankPyon_EmbPalisade" or
-				defName="DankPyon_CavalrySpike" or
-				defName="DankPyon_LogColumn"
-				][stuffCategories]/stuffCategories</xpath>
-				<value>
-					<li>
-						<li>Woody</li>
-					</li>
-				</value>
-			</li>
-
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName="MakeTanningLiquorFromWood"]/ingredients/li/filter/categories</xpath>
 				<value>
@@ -175,18 +136,7 @@
 				</value>
 			</li>
 			
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[
-				defName="DankPyon_DryingRack" or
-				defName="DankPyon_HayRack" or
-				defName="DankPyon_StonecuttingSpot"
-				][costList]/costList</xpath>
-				<value>
-					<costList>
-						<WoodLog>50</WoodLog>
-					</costList>
-				</value>
-			</li>
+			<!-- Diasble after MOD update -->
 			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="DankPyon_Turret_Scorpio"]/costList</xpath>
@@ -220,6 +170,32 @@
 					</costList>
 				</value>
 			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DankPyon_Turret_RepeaterBallista"]/costList</xpath>
+				<value>
+					<costList>
+						<WoodLog>425</WoodLog>
+						<Steel>120</Steel>
+						<DankPyon_ComponentBasic>20</DankPyon_ComponentBasic>
+					</costList>
+				</value>
+			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DankPyon_AncientRuinedCart"]/costList</xpath>
+				<value>
+					<costList>
+						<DankPyon_BrokenWeapons>3</DankPyon_BrokenWeapons>
+						<WoodLog>110</WoodLog>
+						<DankPyon_ComponentBasic>5</DankPyon_ComponentBasic>
+					</costList>
+				</value>
+			</li>
+			
+			<!-- until here -->			
 			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ScenarioDef[defName="DankPyon_LoneWolfStart"]/scenario/parts/li[8]/thingDef</xpath>

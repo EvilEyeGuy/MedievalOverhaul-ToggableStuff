@@ -13,7 +13,7 @@
 				<value>
 					<ThingDef ParentName="DankPyon_BookBuildingBase">
 						<defName>EEG_Tier2_Ressources</defName>
-						<label>advanced ressources</label>
+						<label>advanced resources</label>
 						<graphicData>
 						<texPath>Misc/Books/Steel_Book</texPath>
 						<graphicClass>Graphic_Single</graphicClass>
@@ -118,6 +118,16 @@
 		
 			<li Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[defName = "SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+			<value>
+				<li>EEG_Tier3_Fortification</li>
+				<li>EEG_Tier3_Ranged</li>
+				<li>EEG_Tier3_Melee</li>
+				<li>EEG_Tier2_Ressources</li>
+			</value>
+			</li>
+		
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "DankPyon_AdvancedResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
 			<value>
 				<li>EEG_Tier3_Fortification</li>
 				<li>EEG_Tier3_Ranged</li>
