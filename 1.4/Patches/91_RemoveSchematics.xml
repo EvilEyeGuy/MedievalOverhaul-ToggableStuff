@@ -115,28 +115,7 @@
 					<baseCost>3100</baseCost>
 				</value>
 			</li>
-			
-			<li Class="PatchOperationConditional">
-				<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]/../categories</xpath>
-				<match Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]/../categories</xpath>
-					<value>
-						<categories>
-							<li>Accurex_WoodenPlanks</li>
-							<li>Accurex_WoodenLogs</li>
-						</categories>
-					</value>
-				</match>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]/..</xpath>
-					<value>
-						<categories>
-							<li>Accurex_WoodenPlanks</li>
-							<li>Accurex_WoodenLogs</li>
-						</categories>
-					</value>
-				</nomatch>
-			</li>
+
 		</operations>
 	</Operation>
 </Patch>	

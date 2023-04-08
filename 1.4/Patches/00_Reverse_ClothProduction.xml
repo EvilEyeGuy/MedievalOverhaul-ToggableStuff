@@ -19,7 +19,19 @@
 					<harvestYield>10</harvestYield>
 				</value>
 			</li>
-			
+			<li Class="PatchOperationFindMod">
+				<mods>
+				  <li>Medieval Overhaul: Arcane Archaeologists</li>
+				</mods>
+				<match Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[@Name="Ogam_CapeBase"]/costList</xpath>
+					<value>
+						<costList>
+							<Cloth>45</Cloth>
+						</costList>
+					</value>
+				</match>
+			</li>		
 		</operations>
 	</Operation>
 </Patch>	

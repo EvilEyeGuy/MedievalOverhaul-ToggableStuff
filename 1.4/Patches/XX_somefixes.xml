@@ -34,6 +34,13 @@
 				</nomatch>
 			</li>
 			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ApparelLayerDef[defName="DankPyon_ShellAttachment"]/drawOrder</xpath>
+				<value>
+					<drawOrder>10</drawOrder>
+				</value>
+			</li>
+			
       </operations>
   </Operation>
 

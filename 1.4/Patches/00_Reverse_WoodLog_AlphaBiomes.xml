@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ThingDef[contains(label,'wood') and stuffProps/categories/li = 'Woody']</xpath>
+		<value>
+			<comps>
+				<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+					<rate>1</rate>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+</Patch>	

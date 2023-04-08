@@ -5,7 +5,7 @@
 		<mods>
 		  <li>Dubs Bad Hygiene</li>
 		</mods>
-		<label>Make battlefield remaints deconstructable:</label>
+		<label>Medievalize some of DBH:</label>
 		<operations>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs</xpath>
