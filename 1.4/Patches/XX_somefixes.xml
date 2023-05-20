@@ -41,6 +41,19 @@
 				</value>
 			</li>
 			
+			<li Class="PatchOperationTest">
+				<xpath>Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]</xpath>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/plant/harvestAfterGrowth</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/plant/harvestAfterGrowth</xpath>
+					<value>
+						<harvestAfterGrowth>0.41</harvestAfterGrowth>
+					</value>
+				</match>
+			</li>			
+		
       </operations>
   </Operation>
 
