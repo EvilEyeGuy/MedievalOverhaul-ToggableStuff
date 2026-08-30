@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Toggle Settings -->
+  <MOTS_RemoveSchematics_Label>Disable research schematics</MOTS_RemoveSchematics_Label>
+  <MOTS_RemoveSchematics_Desc>Prevents Medieval Overhaul from adding research schematics.</MOTS_RemoveSchematics_Desc>
+  <MOTS_LoadingCart_Label>Enable loading cart for scribe table</MOTS_LoadingCart_Label>
+  <MOTS_LoadingCart_Desc>Adds back the old loading card for the scribe table.</MOTS_LoadingCart_Desc>
+  <MOTS_BetterVents_Label>Wooden and Stony Vents</MOTS_BetterVents_Label>
+  <MOTS_BetterVents_Desc>Allows you to build wooden and stony vents.</MOTS_BetterVents_Desc>
+  <MOTS_DeconstructScrap_Label>Deconstructable Scrap</MOTS_DeconstructScrap_Label>
+  <MOTS_DeconstructScrap_Desc>Allows you to deconstruct Medieval Overhaul scrapfields.</MOTS_DeconstructScrap_Desc>
+  <MOTS_FlickFireplace_Label>Flickable Fireplaces</MOTS_FlickFireplace_Label>
+  <MOTS_FlickFireplace_Desc>Allows you to toggle Medieval Overhaul fireplaces on and off.</MOTS_FlickFireplace_Desc>
+  <MOTS_Doormats_Label>Rugs Act As Doormats</MOTS_Doormats_Label>
+  <MOTS_Doormats_Desc>Medieval Overhaul cloth and leather rugs act as doormats.</MOTS_Doormats_Desc>
+  
+  <!-- Newsletter / Mod Menu Letter -->
+  <MOT_ModMenuNewsLetter_Title>Medieval Overhaul: Toggleable Stuff</MOT_ModMenuNewsLetter_Title>
+  <MOT_ModMenuNewsLetter_Text>Medieval Overhaul: Toggleable Stuff has its own mod menu. You can change toggleable patches there. Please note that you might have to re-enable some of your previously activated settings due to these changes.</MOT_ModMenuNewsLetter_Text>
+
+</LanguageData>

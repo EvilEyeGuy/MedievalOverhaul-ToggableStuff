@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>True</enabled>
+		<mods>
+			<li>ↁ Elves</li>
+		</mods>
+		<label>[Comp] ↁ Elves research:</label>
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DevDesigner_ElvenEquipment_DarkElves"]/researchViewX</xpath>
+					<value>
+						<researchViewX>9.00</researchViewX>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DevDesigner_ElvenEquipment_DarkElves"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.25</researchViewY>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DevDesigner_ElvenEquipment_HighElves"]/researchViewX</xpath>
+					<value>
+						<researchViewX>10.00</researchViewX>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DevDesigner_ElvenEquipment_HighElves"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.25</researchViewY>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DevDesigner_ElvenEquipment_WoodElves"]/researchViewX</xpath>
+					<value>
+						<researchViewX>11</researchViewX>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DevDesigner_ElvenEquipment_WoodElves"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.25</researchViewY>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[
+					
+					defName="DevDesigner_ElvenEquipment_WoodElves" or
+					defName="DevDesigner_ElvenEquipment_DarkElves" or
+					defName="DevDesigner_ElvenEquipment_HighElves"
+					
+					]</xpath>
+					<value>
+						<tab>DankPyon_MedievalResearchTab</tab>
+					</value>
+				</li>
+				
+				<!--== Apparel ==-->
+				
+				<!-- Common -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_Elves_Apparel']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_Elves_ApparelMetal']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_Elves_ClothHeadgear']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_Elves_MetalHeadgear']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+										
+				<!-- DarkElves -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_BreastplateBase' and contains(defName, 'DarkElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+										
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_Apparel' and contains(defName, 'DarkElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Cloaks' and contains(defName, 'DarkElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_BreastplateBase' and contains(defName, 'DarkElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_Apparel' and contains(defName, 'DarkElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>DankPyon_ProtectiveClothing</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Cloaks' and contains(defName, 'DarkElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>DankPyon_Tailoring</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- HighElves -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_BreastplateBase' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+										
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_Apparel' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Cloaks' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_BreastplateBase' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_Apparel' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>DankPyon_ProtectiveClothing</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Cloaks' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>DankPyon_Tailoring</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- EoodElves -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_BreastplateBase' and contains(defName, 'WoodElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+										
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_Apparel' and contains(defName, 'WoodElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Cloaks' and contains(defName, 'WoodElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_BreastplateBase' and contains(defName, 'WoodElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_Apparel' and contains(defName, 'WoodElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>DankPyon_ProtectiveClothing</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Cloaks' and contains(defName, 'WoodElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>DankPyon_Tailoring</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!--== Headgear ==-->
+				<!-- DarkElves -->
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_DarkElves_ClothHeadgear']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>DankPyon_Tailoring</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_DarkElves_ClothHeadgear']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_DarkElves_MetalHeadgear']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_DarkElves_MetalHeadgear']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<!-- HighElves -->						
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_HighElves_MetalHeadgear']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_HighElves_MetalHeadgear']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<!-- WoodElves -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_WoodElves_ClothHeadgear']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>DankPyon_Tailoring</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_WoodElves_ClothHeadgear']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_WoodElves_MetalHeadgear']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_WoodElves_MetalHeadgear']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<!--== MeleeWeapons ==-->
+				<!-- Common -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_SpearBase']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_SwordBase']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name='DevDesigner_Base_Sharp_Oversize']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<!-- DarkElves -->
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SpearBase' and contains(defName, 'DarkElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SpearBase' and contains(defName, 'DarkElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>DankPyon_NoblePolearms</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Base_Sharp_Oversize' and contains(defName, 'DarkElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Base_Sharp_Oversize' and contains(defName, 'DarkElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>LongBlades</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SwordBase' and contains(defName, 'DarkElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SwordBase' and contains(defName, 'DarkElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>LongBlades</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- HighElves -->
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SpearBase' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SpearBase' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>DankPyon_NoblePolearms</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Base_Sharp_Oversize' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Base_Sharp_Oversize' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>LongBlades</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='BaseMeleeWeapon_Sharp_Quality' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='BaseMeleeWeapon_Sharp_Quality' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>LongBlades</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SwordBase' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SwordBase' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>LongBlades</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- WoodElves -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Base_Sharp_Oversize' and contains(defName, 'WoodElves')]</xpath>
+					<value>
+						<recipeMaker>
+							<researchPrerequisites>
+								<li>DevDesigner_ElvenEquipment_WoodElves</li>
+								<li>LongBlades</li>
+							</researchPrerequisites>
+						</recipeMaker>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='BaseMeleeWeapon_Sharp_Quality' and contains(defName, 'WoodElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='BaseMeleeWeapon_Sharp_Quality' and contains(defName, 'WoodElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>LongBlades</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='BaseMeleeWeapon_Blunt_Quality' and contains(defName, 'WoodElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='BaseMeleeWeapon_Blunt_Quality' and contains(defName, 'WoodElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>DankPyon_NoblePolearms</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SwordBase' and contains(defName, 'WoodElves')]</xpath>
+					<value>
+						<recipeMaker>
+							<researchPrerequisites>
+								<li>DevDesigner_ElvenEquipment_WoodElves</li>
+								<li>LongBlades</li>
+							</researchPrerequisites>
+						</recipeMaker>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_SpearBase' and contains(defName, 'WoodElves')]</xpath>
+					<value>
+						<recipeMaker>
+							<researchPrerequisites>
+								<li>DevDesigner_ElvenEquipment_HighElves</li>
+								<li>DankPyon_NoblePolearms</li>
+							</researchPrerequisites>
+						</recipeMaker>
+					</value>
+				</li>
+				
+				<!--== Pauldrons ==-->
+				<!-- DarkElves -->						
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_MetalPauldrons' and contains(defName, 'DarkElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_MetalPauldrons' and contains(defName, 'DarkElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- HighElves -->	
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_MetalPauldrons' and contains(defName, 'HighElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_MetalPauldrons' and contains(defName, 'HighElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- WoodElves -->	
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_MetalPauldrons' and contains(defName, 'WoodElves')]/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName='DevDesigner_Elves_MetalPauldrons' and contains(defName, 'WoodElves')]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>PlateArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!--== Ranged ==-->
+				<!-- DarkElves -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName='DevDesigner_DarkElves_Crossbow']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName='DevDesigner_DarkElves_Crossbow']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_DarkElves</li>
+							<li>DankPyon_HeavyCrossbow</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- WoodElves -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName='DevDesigner_WoodElves_Bow']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName='DevDesigner_WoodElves_Bow']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>DankPyon_WarBow</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName='DevDesigner_WoodElves_Greatbow']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName='DevDesigner_WoodElves_Greatbow']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>DankPyon_WarBow</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName='DevDesigner_WoodElves_RecurveBow']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName='DevDesigner_WoodElves_RecurveBow']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_WoodElves</li>
+							<li>DankPyon_WarBow</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- HighElves -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName='DevDesigner_HighElves_Longbow']/recipeMaker/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName='DevDesigner_HighElves_Longbow']/recipeMaker</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DevDesigner_ElvenEquipment_HighElves</li>
+							<li>DankPyon_WarBow</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+		</operations>
+	</Operation>
+</Patch>	

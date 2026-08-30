@@ -1,0 +1,11 @@
+.vs/
+obj/
+bin/
+*.pdb
+*.suo
+*.user
+Thumbs.db
+desktop.ini
+
+# Quellcode liegt auf E:\MedievalOverhaul-ToggleableStuff-Source
+1.6/Source/

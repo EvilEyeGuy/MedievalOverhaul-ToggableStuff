@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
-		<enabled>True</enabled>
+		<enabled>False</enabled>
 		<mods>
 		  <li>Medieval Overhaul</li>
 		</mods>
@@ -117,19 +117,50 @@
 				][building]/building</xpath>
 				<value>
 					<building>
-					  <fixedStorageSettings>
+						<maxItemsInCell>4</maxItemsInCell>
+						<fixedStorageSettings>
 							<filter>
-								<thingDefs>
-									<li>WoodLog</li>
-								</thingDefs>
+								<categories Inherit = "false">
+									<li>Accurex_WoodenLogs</li>
+								</categories>
 							</filter>
 						</fixedStorageSettings>
 						<defaultStorageSettings>
 							<priority>Normal</priority>
 							<filter>
-								<thingDefs>
-									<li>WoodLog</li>
-								</thingDefs>
+								<categories Inherit = "false">
+									<li>Accurex_WoodenLogs</li>
+								</categories>
+							</filter>
+						</defaultStorageSettings>
+					</building>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="DankPyon_Timber1x1c" or
+				defName="DankPyon_Timber1x2c" or
+				defName="DankPyon_Timber2x2c"
+				][building]/building</xpath>
+				<value>
+					<building>
+						<maxItemsInCell>4</maxItemsInCell>
+						<fixedStorageSettings>
+							<filter>
+								<categories Inherit = "false">
+									<li>DankPyon_Wood</li>
+									<li>Accurex_WoodenPlanks</li>
+								</categories>
+							</filter>
+						</fixedStorageSettings>
+						<defaultStorageSettings>
+							<priority>Normal</priority>
+							<filter>
+								<categories Inherit = "false">
+									<li>DankPyon_Wood</li>
+									<li>Accurex_WoodenPlanks</li>
+								</categories>
 							</filter>
 						</defaultStorageSettings>
 					</building>
@@ -440,19 +471,6 @@
 			
 			<!-- Fuel Stuff -->
 
-			<li Class="PatchOperationAdd">
-				<xpath>Defs</xpath>
-				<value>
-				  <ThingCategoryDef>
-					<defName>Accurex_WoodenLogs</defName>
-					<label>wooden logs</label>
-					<parent>Root</parent>
-					<resourceReadoutRoot>true</resourceReadoutRoot>
-					<iconPath>UI/Icons/ThingCategories/ResourcesRaw</iconPath>
-				  </ThingCategoryDef>	
-				</value>
-			</li>
-			
 			<li Class="PatchOperationAdd">
 				<xpath>Defs</xpath>
 				<value>

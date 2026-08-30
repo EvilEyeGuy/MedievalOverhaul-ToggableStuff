@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>True</enabled>
+		<mods>
+			<li>Medieval Overhaul</li>
+		</mods>
+		<label>Medieval Overhaul's factions can siege:</label>
+			<operations>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs</xpath>
+					<value>
+						<VFECore.SiegeParameterSetDef>
+							<defName>EEG_MOSiege</defName>
+							<coverDef>DankPyon_CavalrySpike</coverDef>
+							<artilleryBuildingTags>
+								<li>EEG_Siege</li> <!-- or DankPyon_Trebuchet -->
+							</artilleryBuildingTags>
+							<artilleryCountRange>1~2</artilleryCountRange>
+							<mealDef>DankPyon_DriedMeat</mealDef>
+						</VFECore.SiegeParameterSetDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]</xpath>
+					<value>
+						<li Class="VFECore.FactionDefExtension">
+							<siegeParameterSet>EEG_MOSiege</siegeParameterSet>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]</xpath>
+					<value>
+						<canSiege>true</canSiege>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DankPyon_Turret_Trebuchet"]</xpath>
+					<value>
+						<weaponTags>
+							<li>DankPyon_Trebuchet</li>
+						</weaponTags>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DankPyon_Turret_Trebuchet"]/building/buildingTags</xpath>
+					<value>
+						<li>DankPyon_Trebuchet</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs</xpath>
+					<value>
+					  <ThingDef ParentName="BuildingBase">
+						<defName>EEG_Turret_Trebuchet</defName>
+						<label>trebuchet</label>
+						<description>The trebuchet relies on powerful torsion to launch stones over a great distance and with such power to destroy walls. This makes the trebuchet a fearsome siege weapon capable of ravaging defenses; where siege attackers used to climb palisades under enemy missiles, they can now create openings before the battle even begins. Upon seeing the great trebuchet deployed to fields, defenders should attempt to destroy it quickly.</description>
+						<thingClass>Building_TurretGun</thingClass>
+						<drawerType>MapMeshAndRealTime</drawerType>
+						<uiIconScale>0.9</uiIconScale>
+						<uiIconPath>Security/TurretTrebuchet/TurretTrebuchet_MenuIcon</uiIconPath>
+						<graphicData>
+						  <texPath>Security/TurretTrebuchet/TurretTrebuchet_Base</texPath>
+						  <graphicClass>Graphic_Single</graphicClass>
+						  <drawSize>(4,4)</drawSize>
+						  <shadowData>
+							<offset>(-0.13,-0.87,-0.1)</offset>
+							<volume>(0.5,0.4,1.05)</volume>
+						  </shadowData>
+						</graphicData>
+						<techLevel>Medieval</techLevel>
+						<size>(3,3)</size>
+						<altitudeLayer>Building</altitudeLayer>
+						<stealable>false</stealable>
+						<rotatable>true</rotatable>
+						<blockWind>true</blockWind>
+						<passability>PassThroughOnly</passability>
+						<pathCost>50</pathCost>
+						<fillPercent>0.5</fillPercent>
+						<tickerType>Normal</tickerType>
+						<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+						<designationCategory>Security</designationCategory>
+						<!--stuffCategories>
+						  <li>Woody</li>
+						</stuffCategories>
+						<costStuffCount>250</costStuffCount-->
+						<costList>
+						  <Steel>80</Steel>
+						</costList>
+						<statBases>
+						  <MaxHitPoints>450</MaxHitPoints>
+						  <Flammability>1</Flammability>
+						  <WorkToBuild>3600</WorkToBuild>
+						  <Beauty>-20</Beauty>
+						</statBases>
+						<inspectorTabs>
+						  <li>ITab_Shells</li>
+						</inspectorTabs>
+						<weaponTags>
+						  <li>EEG_Siege</li>
+						</weaponTags>
+						<comps>
+						  <li Class="CompProperties_Forbiddable"/>
+						  <li Class="CompProperties_Mannable">
+							<manWorkType>Violent</manWorkType>
+						  </li>
+						</comps>
+						<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+						<hasInteractionCell>true</hasInteractionCell>
+						<building>
+							<turretBurstWarmupTime>4</turretBurstWarmupTime>
+							<turretBurstCooldownTime>42</turretBurstCooldownTime>
+							<buildingTags>
+								<li>EEG_Siege</li>
+							</buildingTags>
+							<turretGunDef>EEG_Artillery_Trebuchet</turretGunDef>
+							<turretTopDrawSize>6</turretTopDrawSize>
+							<turretTopOffset>(0, -1)</turretTopOffset>
+						</building>
+						<repairEffect>ConstructDirt</repairEffect>
+						<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+						<specialDisplayRadius>29.9</specialDisplayRadius>
+						<researchPrerequisites>
+						  <li>DankPyon_Trebuchet</li>
+						</researchPrerequisites>
+						<placeWorkers>
+						  <li>PlaceWorker_NotUnderRoof</li>
+						  <li>PlaceWorker_TurretTop</li>
+						</placeWorkers>
+					  </ThingDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs</xpath>
+					<value>
+					  <ThingDef>
+						<defName>EEG_Artillery_Trebuchet</defName>
+						<label>trebuchet</label>
+						<description>A catapult is a ballistic device used to launch a projectile a great distance without the aid of gunpowder or other propellants. In use since ancient times, the catapult has proven to be one of the most persistently effective mechanisms in warfare.</description>
+						<thingClass>ThingWithComps</thingClass>
+						<category>Item</category>
+						<useHitPoints>false</useHitPoints>
+						<equipmentType>Primary</equipmentType>
+						<tickerType>Never</tickerType>
+						<destroyOnDrop>True</destroyOnDrop>
+						<tradeability>None</tradeability>
+						<techLevel>Medieval</techLevel>
+						<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+						<graphicData>
+						  <texPath>Security/TurretTrebuchet/TurretTrebuchet_Top</texPath>
+						  <graphicClass>Graphic_Single</graphicClass>
+						</graphicData>
+						<statBases>
+						  <RangedWeapon_Cooldown>42</RangedWeapon_Cooldown>
+						</statBases>
+						<weaponTags>
+							<li>EEG_Siege</li>
+						</weaponTags>
+						<verbs>
+						  <li>
+							<verbClass>Verb_Shoot</verbClass>
+							<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+							<hasStandardCommand>true</hasStandardCommand>
+							<warmupTime>4.0</warmupTime>
+							<forcedMissRadius>9</forcedMissRadius>
+							<requireLineOfSight>false</requireLineOfSight>
+							<minRange>29.9</minRange>
+							<range>500</range>
+							<burstShotCount>1</burstShotCount>
+							<soundCast>Bow_Large</soundCast>
+							<muzzleFlashScale>0</muzzleFlashScale>
+							<targetParams>
+							  <canTargetLocations>true</canTargetLocations>
+							</targetParams>
+						  </li>
+						</verbs>
+						<comps>
+						  <li>
+							<compClass>CompEquippable</compClass>
+						  </li>
+						  <li Class="CompProperties_ChangeableProjectile" />
+						</comps>
+						<building>
+						  <fixedStorageSettings>
+							<filter>
+							  <categories>
+								<li>StoneChunks</li>
+							  </categories>
+							</filter>
+						  </fixedStorageSettings>
+						  <defaultStorageSettings>
+							<filter>
+							  <categories>
+								<li>StoneChunks</li>
+							  </categories>
+							</filter>
+						  </defaultStorageSettings>
+						</building>
+					  </ThingDef>
+					</value>
+				</li>
+				
+		</operations>
+	</Operation>
+</Patch>	

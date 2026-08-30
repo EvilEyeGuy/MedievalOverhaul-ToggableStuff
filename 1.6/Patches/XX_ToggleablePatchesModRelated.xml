@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>BetterVents</li>
+        </mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="MedievalOverhaulToggleableStuff.PatchOperation_ToggleSettings">
+					<settings>
+						<li>MOTS_BetterVents</li>
+					</settings>
+					<active Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="Vent"]/costList</xpath>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="Vent"]</xpath>
+								<value>
+									<costStuffCount>50</costStuffCount>
+									<stuffCategories>
+										<li>Woody</li>
+										<li>Stony</li>
+									</stuffCategories>
+								</value>
+							</li>
+						</operations>
+					</active>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Door Mat</li>
+        </mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="MedievalOverhaulToggleableStuff.PatchOperation_ToggleSettings">
+					<settings>
+						<li>MOTS_Door_Mat</li>
+					</settings>
+					<active Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[@ParentName="DankPyon_RugPatched_ClothBase" or @ParentName="DankPyon_RugPatched_LeatherBase"]</xpath>
+								<value>
+									<thingClass Inherit="False">LT.Building_DoorMat</thingClass>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[@ParentName="DankPyon_RugPatched_ClothBase" or @ParentName="DankPyon_RugPatched_LeatherBase"]</xpath>
+								<value>
+									<filthLeaving Inherit="False">Filth_RubbleBuilding</filthLeaving>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[@ParentName="DankPyon_RugPatched_ClothBase" or @ParentName="DankPyon_RugPatched_LeatherBase"]</xpath>
+								<value>
+									<tickerType>Normal</tickerType>
+								</value>
+							</li>
+						</operations>
+					</active>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Doormats</li>
+        </mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="MedievalOverhaulToggleableStuff.PatchOperation_ToggleSettings">
+					<settings>
+						<li>MOTS_Doormats</li>
+					</settings>
+					<active Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[@ParentName="DankPyon_RugPatched_ClothBase" or @ParentName="DankPyon_RugPatched_LeatherBase"]</xpath>
+								<value>
+									<thingClass Inherit="False">SyrDoorMats.Building_DoorMat</thingClass>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[@ParentName="DankPyon_RugPatched_ClothBase" or @ParentName="DankPyon_RugPatched_LeatherBase"]</xpath>
+								<value>
+									<filthLeaving Inherit="False">Filth_RubbleBuilding</filthLeaving>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[@ParentName="DankPyon_RugPatched_ClothBase" or @ParentName="DankPyon_RugPatched_LeatherBase"]</xpath>
+								<value>
+									<tickerType>Normal</tickerType>
+								</value>
+							</li>
+						</operations>
+					</active>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

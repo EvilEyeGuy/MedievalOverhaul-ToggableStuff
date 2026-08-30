@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="VFECore.PatchOperationToggableSequence">
+    <enabled>False</enabled>
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <label>Animal helmets can be worn over ordinary ones:</label>
+    <operations>
+
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="DankPyon_AnimalHoodBase"]</xpath>
+			<value>
+				<modExtensions>
+					<li Class="VFECore.ApparelDrawPosExtension">
+						<headgearDrawSettings>
+							<drawPosNorthOffset>(0, 0.001, 0.07)</drawPosNorthOffset>
+							<drawPosSouthOffset>(0, 0.001, 0.07)</drawPosSouthOffset>
+							<drawPosWestOffset>(-0.07, 0.001, 0.07)</drawPosWestOffset>
+							<drawPosEastOffset>(0.07, 0.001, 0.07)</drawPosEastOffset>
+						</headgearDrawSettings>
+						<isUnifiedApparel>true</isUnifiedApparel>
+						<hideHead>false</hideHead>
+					</li>
+				</modExtensions>
+			</value>
+		</li>
+
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+			defName="DankPyon_Headgear_WolfTimber" or
+			defName="DankPyon_Headgear_BearGrizzly"
+			]/apparel/layers</xpath>
+			<value>
+				<layers>
+					<li>EyeCover</li>
+				</layers>
+			</value>
+		</li>
+
+	</operations>
+  </Operation>
+</Patch>
