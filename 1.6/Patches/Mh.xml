@@ -4,7 +4,11 @@
 		<settings>
 			<li>MOTS_LoadingCart</li>
 		</settings>
-		<active Class="PatchOperationSequence">
+		<active Class="PatchOperationFindMod">
+			<mods>
+				<li>Medieval Overhaul: QoL &amp; Fixes</li>
+			</mods>
+			<nomatch Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
@@ -63,6 +67,7 @@
 					</value>
 				</li>
 			</operations>
+			</nomatch>
 		</active>
 	</Operation>
 </Patch>

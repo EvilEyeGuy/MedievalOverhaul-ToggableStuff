@@ -1,66 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_BulkGoodsMerchant"]</xpath>
-    </nomatch>
-  </Operation>
 
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_ArtPatron"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_ArtPatron"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_BulkGoodsMerchant"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_BulkGoodsMerchant"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
 
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Armorsmith"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Armorsmith"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_ArtPatron"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_ArtPatron"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_ArtPatron"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
 
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Weaponsmith"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Weaponsmith"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Armorsmith"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Armorsmith"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Armorsmith"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
 
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_RuinsMerchant"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_RuinsMerchant"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Weaponsmith"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Weaponsmith"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Weaponsmith"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
 
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Scholar"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Scholar"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_RuinsMerchant"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_RuinsMerchant"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_RuinsMerchant"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
 
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Alchemist"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Alchemist"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Scholar"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Scholar"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Scholar"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
 
-  <!-- Visitor and base trader kinds -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Visitor_Medieval_Standard"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/visitorTraderKinds/li[text()="DankPyon_Visitor_Medieval_Standard"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Alchemist"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Alchemist"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/caravanTraderKinds/li[text()="DankPyon_Caravan_Medieval_Alchemist"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
 
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/TraderKindDef[defName="DankPyon_Base_Medieval_Standard"]</xpath>
-    <nomatch Class="PatchOperationRemove">
-      <xpath>Defs/FactionDef/baseTraderKinds/li[text()="DankPyon_Base_Medieval_Standard"]</xpath>
-    </nomatch>
-  </Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Visitor_Medieval_Standard"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/visitorTraderKinds/li[text()="DankPyon_Visitor_Medieval_Standard"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/visitorTraderKinds/li[text()="DankPyon_Visitor_Medieval_Standard"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TraderKindDef[defName="DankPyon_Base_Medieval_Standard"]</xpath>
+		<nomatch Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef/baseTraderKinds/li[text()="DankPyon_Base_Medieval_Standard"]</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/FactionDef/baseTraderKinds/li[text()="DankPyon_Base_Medieval_Standard"]</xpath>
+			</match>
+		</nomatch>
+	</Operation>
+
 </Patch>

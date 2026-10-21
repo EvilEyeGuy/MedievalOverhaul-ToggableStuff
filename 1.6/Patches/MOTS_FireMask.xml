@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="MedievalOverhaulToggleableStuff.PatchOperation_ToggleSettings">
+		<settings>
+			<li>MOTS_FireMask</li>
+		</settings>
+		<active Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="DankPyon_Furnace"]/comps</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DankPyon_Furnace"]/comps</xpath>
+				<value>
+					<li Class="MedievalOverhaulToggleableStuff.CompProperties_MaskedFire">
+						<fires>
+							<li>
+								<offset>(-0.80, 0, -0.10)</offset>
+								<size>0.60</size>
+							</li>
+							<li>
+								<offset>(-0.42, 0, -0.06)</offset>
+								<size>0.80</size>
+							</li>
+							<li>
+								<offset>(0.00, 0, -0.04)</offset>
+								<size>0.95</size>
+							</li>
+							<li>
+								<offset>(0.42, 0, -0.06)</offset>
+								<size>0.80</size>
+							</li>
+							<li>
+								<offset>(0.80, 0, -0.10)</offset>
+								<size>0.60</size>
+							</li>
+						</fires>
+					</li>
+				</value>
+			</match>
+		</active>
+	</Operation>
+
+</Patch>

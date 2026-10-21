@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="MedievalOverhaulToggleableStuff.PatchOperation_ToggleSettings">
+		<settings>
+			<li>MOTS_Thermostat</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_WoodBurningStove"]/comps</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_WoodBurningStove"]/comps</xpath>
+						<value>
+							<li Class="MedievalOverhaulToggleableStuff.CompProperties_Thermostat">
+								<defaultTarget>24</defaultTarget>
+								<minTarget>-10</minTarget>
+								<maxTarget>45</maxTarget>
+								<degreesPerStep>12</degreesPerStep>
+							</li>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_RusticHearth"]/comps</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_RusticHearth"]/comps</xpath>
+						<value>
+							<li Class="MedievalOverhaulToggleableStuff.CompProperties_Thermostat">
+								<defaultTarget>21</defaultTarget>
+								<minTarget>-10</minTarget>
+								<maxTarget>45</maxTarget>
+								<degreesPerStep>12</degreesPerStep>
+							</li>
+						</value>
+					</match>
+				</li>
+
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

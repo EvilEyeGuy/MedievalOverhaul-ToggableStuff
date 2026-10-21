@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <!-- Toggle Settings -->
+
+  <MOTS_RestartNeeded>Deine Änderungen sind gespeichert. Sie wirken sich beim nächsten Start von RimWorld aus.</MOTS_RestartNeeded>
+
+  <MOTS_NewsTitle>Medieval Overhaul: Toggleable Stuff</MOTS_NewsTitle>
+  <MOTS_NewsText>Holzofen, Grill, Schmelzofen und Hearth zeigen ihr Feuer jetzt dort, wo es hingehört. Die Flammen werden sauber auf die jeweilige Feueröffnung zugeschnitten und scheinen nicht mehr über den Ofen hinaus.
+
+Ebenfalls neu und standardmäßig deaktiviert: ein Thermostat für Holzofen und Hearth. Der Winter ist kälter als gedacht? Kein Problem. Erhöhe einfach die gewünschte Temperatur, indem du mehr Holz verbrennst.</MOTS_NewsText>
+
+  <MOTS_RestartNote>Die meisten Änderungen wirken sich beim nächsten Start des Spiels aus.</MOTS_RestartNote>
+
   <MOTS_RemoveSchematics_Label>Schemata deaktivieren</MOTS_RemoveSchematics_Label>
   <MOTS_RemoveSchematics_Desc>Verhindert, dass Medieval Overhaul Forschungsschemata hinzufügt.</MOTS_RemoveSchematics_Desc>
-  <MOTS_BetterVents_Label>Holz- und Steinlüftungen</MOTS_BetterVents_Label>
-  <MOTS_BetterVents_Desc>Ermöglicht das Bauen von Holz- und Steinlüftungen.</MOTS_BetterVents_Desc>
-  <MOTS_DeconstructScrap_Label>Abbaubares Schrott</MOTS_DeconstructScrap_Label>
-  <MOTS_DeconstructScrap_Desc>Ermöglicht den Abbau von Medieval-Overhaul-Schrrottfeldern.</MOTS_DeconstructScrap_Desc>
+
+  <MOTS_LoadingCart_Label>Ladewagen</MOTS_LoadingCart_Label>
+  <MOTS_LoadingCart_Desc>Bringt den Ladewagen zurück. Er wirkt wie ein normales Funkfeuer und bietet Händlern alles an, was rundherum lagert. Ist Medieval Overhaul: QoL and Fixes aktiv, wird dessen eigener Wagen verwendet.</MOTS_LoadingCart_Desc>
+
+  <MOTS_DeconstructScrap_Label>Abbaubarer Schrott</MOTS_DeconstructScrap_Label>
+  <MOTS_DeconstructScrap_Desc>Ermöglicht den Abbau von Medieval-Overhaul-Schrottfeldern.</MOTS_DeconstructScrap_Desc>
+
   <MOTS_FlickFireplace_Label>Schaltbare Kamine</MOTS_FlickFireplace_Label>
   <MOTS_FlickFireplace_Desc>Ermöglicht das An- und Ausschalten von Medieval-Overhaul-Kaminen.</MOTS_FlickFireplace_Desc>
-  <MOTS_Doormats_Label>Teppiche wirken als Türmatten</MOTS_Doormats_Label>
-  <MOTS_Doormats_Desc>Medieval-Overhaul-Leinen- und Lederteppiche wirken als Türmatten.</MOTS_Doormats_Desc>
 
-  <!-- Newsletter / Mod Menu Letter -->
-  <MOT_ModMenuNewsLetter_Title>Medieval Overhaul: Toggleable Stuff</MOT_ModMenuNewsLetter_Title>
-  <MOT_ModMenuNewsLetter_Text>Medieval Overhaul: Toggleable Stuff hat ein eigenes Mod-Menü. Du kannst die schaltbaren Patches dort ändern. Beachte, dass du möglicherweise einige deiner zuvor aktivierten Einstellungen erneut aktivieren musst.</MOT_ModMenuNewsLetter_Text>
+  <MOTS_FireMask_Label>Flamme bleibt im Ofen</MOTS_FireMask_Label>
+  <MOTS_FireMask_Desc>Feuer wird auf die Luke beschnitten, in der es brennt, statt über dem ganzen Gebäude zu liegen. Gilt für Holzofen, Hearth, Grill und Schmelzofen, der eine eigene Flammenreihe bekommt.</MOTS_FireMask_Desc>
+
+  <MOTS_Thermostat_Label>Thermostat für Ofen und Hearth</MOTS_Thermostat_Label>
+  <MOTS_Thermostat_Desc>Erlaubt eine Zieltemperatur am Holzofen und am Hearth. Ist der Raum warm genug, wird das Feuer gedrosselt und braucht ein Viertel des Brennstoffs. Stellst du das Ziel höher, als das Gebäude von sich aus schafft, brennt das Feuer stärker, und das kostet mehr Brennstoff, als die zusätzliche Wärme wert ist.</MOTS_Thermostat_Desc>
+
+  <MOTS_ThermostatBurning>Thermostat: {0}. Feuer auf {1}, verbraucht {2} Brennstoff pro Tag.</MOTS_ThermostatBurning>
+  <MOTS_SchratSaplings_Label>Junge große Bäume können Schrat-Setzlinge verbergen</MOTS_SchratSaplings_Label>
+  <MOTS_SchratSaplings_Desc>Wird eine große Eiche, ein großer Iter oder eine große Weide gefällt, bevor sie erntereif ist, kommen mit 10 % Chance ein oder zwei feindliche Schrat-Setzlinge heraus. Ausgewachsene Bäume behalten die eigene Schrat-Chance von Medieval Overhaul.</MOTS_SchratSaplings_Desc>
+  <MOTS_SchratSaplingsLetter>Schrat-Setzlinge</MOTS_SchratSaplingsLetter>
+  <MOTS_SchratSaplingsLetterText>Im jungen Baum ({0}) haben sich Schrat-Setzlinge versteckt und greifen an.</MOTS_SchratSaplingsLetterText>
+  <MOTS_ThermostatEmber>Thermostat: {0}. Warm genug, das Feuer glimmt und braucht {1} Brennstoff pro Tag.</MOTS_ThermostatEmber>
+
+  <MOTS_BetterVents_Label>Holz- und Steinlüftungen</MOTS_BetterVents_Label>
+  <MOTS_BetterVents_Desc>Ermöglicht das Bauen von Holz- und Steinlüftungen.</MOTS_BetterVents_Desc>
+
+  <MOTS_Door_Mat_Label>Teppiche wirken als Fußmatten</MOTS_Door_Mat_Label>
+  <MOTS_Door_Mat_Desc>Leinen- und Lederteppiche von Medieval Overhaul säubern die Füße aller, die darüber gehen. Dafür wird der Mod Door Mat genutzt.</MOTS_Door_Mat_Desc>
+
+  <MOTS_Doormats_Label>Teppiche wirken als Türmatten</MOTS_Doormats_Label>
+  <MOTS_Doormats_Desc>Leinen- und Lederteppiche von Medieval Overhaul wirken als Türmatten. Dafür wird der Mod Doormats genutzt.</MOTS_Doormats_Desc>
+
 
 </LanguageData>

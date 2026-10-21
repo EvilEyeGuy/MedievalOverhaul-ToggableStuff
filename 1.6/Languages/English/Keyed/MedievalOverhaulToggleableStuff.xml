@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <!-- Toggle Settings -->
+
+  <MOTS_RestartNeeded>Your changes have been saved. They take effect the next time you start RimWorld.</MOTS_RestartNeeded>
+
+  <MOTS_NewsTitle>Medieval Overhaul: Toggleable Stuff</MOTS_NewsTitle>
+  <MOTS_NewsText>The wood burning stove, grill, furnace and hearth now show their fire exactly where it belongs. The flames are properly clipped to the fire opening and no longer extend beyond the building.
+
+Also new and disabled by default: a thermostat for the wood burning stove and hearth. Winter colder than expected? No problem. Simply increase the desired temperature by burning more wood.</MOTS_NewsText>
+
+  <MOTS_RestartNote>Most changes take effect the next time the game is started.</MOTS_RestartNote>
+
   <MOTS_RemoveSchematics_Label>Disable research schematics</MOTS_RemoveSchematics_Label>
   <MOTS_RemoveSchematics_Desc>Prevents Medieval Overhaul from adding research schematics.</MOTS_RemoveSchematics_Desc>
-  <MOTS_LoadingCart_Label>Enable loading cart for scribe table</MOTS_LoadingCart_Label>
-  <MOTS_LoadingCart_Desc>Adds back the old loading card for the scribe table.</MOTS_LoadingCart_Desc>
-  <MOTS_BetterVents_Label>Wooden and Stony Vents</MOTS_BetterVents_Label>
-  <MOTS_BetterVents_Desc>Allows you to build wooden and stony vents.</MOTS_BetterVents_Desc>
+
+  <MOTS_LoadingCart_Label>Loading cart</MOTS_LoadingCart_Label>
+  <MOTS_LoadingCart_Desc>Brings back the loading cart. It works like a vanilla trade beacon and offers everything stored around it to traders. If Medieval Overhaul: QoL and Fixes is active, its own cart is used instead.</MOTS_LoadingCart_Desc>
+
   <MOTS_DeconstructScrap_Label>Deconstructable Scrap</MOTS_DeconstructScrap_Label>
   <MOTS_DeconstructScrap_Desc>Allows you to deconstruct Medieval Overhaul scrapfields.</MOTS_DeconstructScrap_Desc>
+
   <MOTS_FlickFireplace_Label>Flickable Fireplaces</MOTS_FlickFireplace_Label>
   <MOTS_FlickFireplace_Desc>Allows you to toggle Medieval Overhaul fireplaces on and off.</MOTS_FlickFireplace_Desc>
+
+  <MOTS_FireMask_Label>Flame stays inside the stove</MOTS_FireMask_Label>
+  <MOTS_FireMask_Desc>Fires are clipped to the opening they burn in instead of being drawn across the whole building. Covers the wood burning stove, the hearth, the grill and the furnace, which gets a row of flames of its own.</MOTS_FireMask_Desc>
+
+  <MOTS_Thermostat_Label>Thermostat for stove and hearth</MOTS_Thermostat_Label>
+  <MOTS_Thermostat_Desc>Lets you set a target temperature on the wood burning stove and the hearth. Once the room is warm enough the fire is damped down and burns a quarter of the fuel. Setting the target above what the building manages on its own makes the fire burn hotter, which costs more fuel than the extra heat is worth.</MOTS_Thermostat_Desc>
+
+  <MOTS_ThermostatBurning>Thermostat: {0}. Fire at {1}, burning {2} fuel per day.</MOTS_ThermostatBurning>
+  <MOTS_SchratSaplings_Label>Young great trees can hide schrat saplings</MOTS_SchratSaplings_Label>
+  <MOTS_SchratSaplings_Desc>Cutting a great oak, great iter or great willow before it is ready to harvest has a 10% chance to release one or two hostile schrat saplings. Grown trees keep Medieval Overhaul's own chance for a schrat.</MOTS_SchratSaplings_Desc>
+  <MOTS_SchratSaplingsLetter>Schrat saplings</MOTS_SchratSaplingsLetter>
+  <MOTS_SchratSaplingsLetterText>Schrat saplings were hiding in the young {0} and attack.</MOTS_SchratSaplingsLetterText>
+  <MOTS_ThermostatEmber>Thermostat: {0}. Warm enough, the fire is banked and burns {1} fuel per day.</MOTS_ThermostatEmber>
+
+  <MOTS_BetterVents_Label>Wooden and Stony Vents</MOTS_BetterVents_Label>
+  <MOTS_BetterVents_Desc>Allows you to build wooden and stony vents.</MOTS_BetterVents_Desc>
+
+  <MOTS_Door_Mat_Label>Rugs Act As Door Mats</MOTS_Door_Mat_Label>
+  <MOTS_Door_Mat_Desc>Medieval Overhaul cloth and leather rugs clean the feet of anyone walking over them. This uses the Door Mat mod.</MOTS_Door_Mat_Desc>
+
   <MOTS_Doormats_Label>Rugs Act As Doormats</MOTS_Doormats_Label>
-  <MOTS_Doormats_Desc>Medieval Overhaul cloth and leather rugs act as doormats.</MOTS_Doormats_Desc>
-  
-  <!-- Newsletter / Mod Menu Letter -->
-  <MOT_ModMenuNewsLetter_Title>Medieval Overhaul: Toggleable Stuff</MOT_ModMenuNewsLetter_Title>
-  <MOT_ModMenuNewsLetter_Text>Medieval Overhaul: Toggleable Stuff has its own mod menu. You can change toggleable patches there. Please note that you might have to re-enable some of your previously activated settings due to these changes.</MOT_ModMenuNewsLetter_Text>
+  <MOTS_Doormats_Desc>Medieval Overhaul cloth and leather rugs act as doormats. This uses the Doormats mod.</MOTS_Doormats_Desc>
+
 
 </LanguageData>
